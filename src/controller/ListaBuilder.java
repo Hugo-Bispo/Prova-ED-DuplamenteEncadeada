@@ -18,15 +18,15 @@ public class ListaBuilder {
 		System.out.println(lista2.get(tamanholista2 -1 ));
 		
 			while(true) {
-
-				listas_unidas.add(lista1.get(tamanholista1));
-				listas_unidas.add(lista2.get(tamanholista2));
 				if(tamanholista1>=lista1.size()) {
 					break;
 				}
 				if(tamanholista2==0) {
 					break;
 				}
+				
+				listas_unidas.add(lista1.get(tamanholista1));
+				listas_unidas.add(lista2.get(tamanholista2));
 				tamanholista1++;
 				tamanholista2--;
 			}
