@@ -1,8 +1,6 @@
 package view;
 
 import java.util.LinkedList;
-import java.util.List;
-import javax.swing.JOptionPane;
 import controller.ListaBuilder;
 
 public class Principal {
@@ -10,7 +8,7 @@ public class Principal {
 	public static void main(String[] args) {
 		LinkedList<String> lista1 = new LinkedList<String>();
 		LinkedList<String> lista2 = new LinkedList<String>();
-		LinkedList<String> lista_decrescente = new LinkedList<String>();
+		LinkedList<String> unidas = new LinkedList<String>();
 
 		ListaBuilder builder = new ListaBuilder();
 
@@ -25,7 +23,11 @@ public class Principal {
 			lista2 = builder.gerarlistas(sobrenome[i], lista2);
 		}
 
-		builder.concatenarlistas(lista1, lista2);
+		unidas = builder.concatenarlistas(lista1, lista2);
+		
+		System.out.println("Lista Nome" + lista1.toString());
+		System.out.println("Lista Primeiro Sobrenome" + lista2.toString());
+		System.out.println("Concatenadas" + unidas.toString());
 
 	}
 }
