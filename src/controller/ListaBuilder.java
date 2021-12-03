@@ -12,10 +12,13 @@ public class ListaBuilder {
 	public LinkedList<String> concatenarlistas(LinkedList<String> lista1, LinkedList<String> lista2) {
 		LinkedList<String> listas_unidas = new LinkedList<String>();
 		int tamanholista1 = 0;
-		int tamanholista2 = lista2.size();
+		int tamanholista2 = lista2.size() -1 ;
 		
-		if(tamanholista1>tamanholista2) {
+		System.out.println(lista1.get(tamanholista1));
+		System.out.println(lista2.get(tamanholista2 -1 ));
+		
 			while(true) {
+
 				listas_unidas.add(lista1.get(tamanholista1));
 				listas_unidas.add(lista2.get(tamanholista2));
 				if(tamanholista1>=lista1.size()) {
@@ -27,7 +30,6 @@ public class ListaBuilder {
 				tamanholista1++;
 				tamanholista2--;
 			}
-		}
 		return listas_unidas;
 	}
 }
